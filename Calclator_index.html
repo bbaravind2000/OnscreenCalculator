@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<style>
+.calculator_body{
+        width:400px;
+        height:500px;
+        background-color:grey;
+   
+      }
+#screen{
+         width:80%;
+         height:30px;
+        margin-left:30px;
+        margin-top:10px;
+}
+
+.eql{
+      width: 60px;
+    height: 40px;
+    margin-left: 30px;
+    margin-top: 50px;
+    
+     }
+
+.eql:hover{
+            background-color:#B87333;
+            color:white;
+            border:none;
+   
+ }
+
+.btn{
+    width: 60px;
+    height: 40px;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.btn:hover{
+       background-color:green;
+       color:white;
+}
+
+.clear{
+     width:70px;
+     height:50px;
+     margin-top:30px;
+     margin-left:20px;
+     background-color:orange;
+     border:1px;
+     cursor:pointer;
+  }
+
+.clear:hover {
+ background-color:#e7e7e7;
+}
+
+</style>
+</head>
+<body>
+
+<div class="main">
+ 
+ <div class="calculator_body">
+
+  <div class="output">
+    <input type="text" id="screen" align="center">
+    </div>
+
+
+   <div class="button_alignment">
+      <button class="clear" onclick=clearDisplay()>C</button> <br>
+
+      <div class="row">
+       <button onclick="buttonclick(7)" class="btn">7</button>
+       <button onclick="buttonclick(8)" class="btn">8</button>
+       <button onclick="buttonclick(9)" class="btn">9</button>
+       <button onclick="buttonclick('/')" class="btn">÷</button>
+    </div>
+  
+       <div class="row">
+       <button onclick="buttonclick(4)" class="btn">4</button>
+       <button onclick="buttonclick(5)" class="btn">5</button>
+       <button onclick="buttonclick(6)" class="btn">6</button>
+       <button onclick="buttonclick('*')" class="btn">X</button>
+    </div>
+
+        <div class="row">
+       <button onclick="buttonclick(1)" class="btn">1</button>
+       <button onclick="buttonclick(2)" class="btn">2</button>
+       <button onclick="buttonclick(3)" class="btn">3</button>
+       <button onclick="buttonclick('-')" class="btn">-</button>
+    </div>
+
+         <div class="row">
+       <button onclick="buttonclick(0)" class="btn">0</button>
+       <button onclick="buttonclick('.')" class="btn">.</button>
+       <button onclick="buttonclick('+')" class="btn">+</button>
+       <button onclick="equalClick()" class="eql">=</button>
+    </div>
+
+
+</div>
+<script>
+function buttonclick(val)
+{
+    document.getElementById("screen").value+=val;
+    }
+
+function clearDisplay(){
+         document.getElementById("screen").value=" ";
+    }
+function equalClick(){
+        let text=document.getElementById("screen").value;
+        let result=eval(text);
+        document.getElementById("screen").value=result;
+}
+</script>
+</body>
+</html>
