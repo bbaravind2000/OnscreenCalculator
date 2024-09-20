@@ -1,0 +1,32 @@
+.calculator_body{
+        width:400px;
+        height:500px;
+        background-color:grey;
+   
+      }
+#screen{
+         width:80%;
+         height:30px;
+        margin-left:30px;
+        margin-top:10px;
+}
+
+.btn{
+    width: 60px;
+    height: 40px;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.clear{
+     width:70px;
+     height:50px;
+     margin-top:30px;
+     margin-left:20px;
+     background-color:orange;
+     border:1px;
+     cursor:pointer;
+  }
+.clear:hover {
+ background-color:#e7e7e7;
+}
